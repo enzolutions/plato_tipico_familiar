@@ -2,5 +2,9 @@ name = Minimal
 description = Start with only a few modules enabled.
 version = VERSION
 core = 7.x
+<<<<<<< HEAD
+=======
+hidden = TRUE
+>>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
 dependencies[] = block
 dependencies[] = dblog
