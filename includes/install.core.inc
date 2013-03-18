@@ -1079,7 +1079,6 @@ function _install_select_profile($profiles) {
       }
     }
   }
-<<<<<<< HEAD
   // Check for a profile marked as "exclusive" and ensure that only one
   // profile is marked as such.
   $exclusive_profile = NULL;
@@ -1097,8 +1096,6 @@ function _install_select_profile($profiles) {
     }
   }
   return $exclusive_profile;
-=======
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
 }
 
 /**
