@@ -122,8 +122,6 @@ function image_toolkit_invoke($method, stdClass $image, array $params = array())
  *   - "file_size": File size in bytes.
  */
 function image_get_info($filepath, $toolkit = FALSE) {
-<<<<<<< HEAD
-=======
   // Cache image_info if possible. This provides a significant speedup on style
   // rendering and generation, as well as with IMCE and other image-heavy
   // contributed modules.
@@ -139,7 +137,6 @@ function image_get_info($filepath, $toolkit = FALSE) {
       return $cache;
     }
   }
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
   $details = FALSE;
   if (!is_file($filepath) && !is_uploaded_file($filepath)) {
     return $details;
@@ -157,13 +154,9 @@ function image_get_info($filepath, $toolkit = FALSE) {
       $details['file_size'] = filesize($filepath);
     }
   }
-<<<<<<< HEAD
-
-=======
   if (function_exists('pantheon_cache_get')) {
     pantheon_cache_set($cid, $details);
   }
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
   return $details;
 }
 

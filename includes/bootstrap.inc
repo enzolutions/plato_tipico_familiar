@@ -8,11 +8,7 @@
 /**
  * The current system version.
  */
-<<<<<<< HEAD
-define('VERSION', '7.19');
-=======
 define('VERSION', '7.21');
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
 
 /**
  * Core API compatibility.
@@ -727,8 +723,6 @@ function drupal_settings_initialize() {
           $conf[$conf_key] = $conf_value;
         }
       }
-<<<<<<< HEAD
-=======
       elseif ($key == 'databases') {
         // Protect default configuration but allow the specification of
         // additional databases. Also, allows fun things with 'prefix' if they
@@ -738,7 +732,6 @@ function drupal_settings_initialize() {
         }
         $databases = array_replace_recursive($databases, $value);
       }
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
       else {
         $$key = $value;
       }
@@ -2431,12 +2424,6 @@ function _drupal_bootstrap_variables() {
   if (!empty($GLOBALS['databases']) && variable_get('pressflow_smart_start', FALSE)) {
     try {
       $result = db_query('SELECT s.name FROM {system} s WHERE s.name = :name', array(':name' => 'system'));
-<<<<<<< HEAD
-    } catch (Exception $e) {
-      // Redirect to the installer if an essential table is missing.
-      include_once DRUPAL_ROOT . '/includes/install.inc';
-      install_goto('install.php');
-=======
     } catch (PDOException $e) {
       if ($e->getCode() == '2003') {
         header('Status: 550 Database Offline');
@@ -2446,7 +2433,6 @@ function _drupal_bootstrap_variables() {
         include_once DRUPAL_ROOT . '/includes/install.inc';
         install_goto('install.php');
       }
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
     }
   }
 
