@@ -1041,7 +1041,6 @@ function install_select_profile(&$install_state) {
 }
 
 /**
-<<<<<<< HEAD
  * Selects an installation profile.
  *
  * A profile will be selected if:
@@ -1057,9 +1056,6 @@ function install_select_profile(&$install_state) {
  * @return
  *   The machine-readable name of the selected profile or NULL if no profile was
  *   selected.
-=======
- * Selects an installation profile from a list or from a $_POST submission.
->>>>>>> dffabfdf26ebe753fb13e4a0a14c67461d4a3643
  */
 function _install_select_profile($profiles) {
   if (sizeof($profiles) == 0) {
