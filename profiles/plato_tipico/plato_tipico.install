@@ -286,7 +286,7 @@ function _plato_tipico_import_translation(&$install_state) {
 
 function _plato_tipico_combine_ingredients() {
   global $base_url;
-  
+    
   //Set public path.
   variable_set('file_public_path', 'sites/default/files');
 
@@ -627,7 +627,7 @@ function _plato_tipico_combine_ingredients() {
   $box['info'] = 'Libros 7 Sabores';
   $box['format'] = 'full_html';
   $box['machine_name'] = '7sabores_books';
-  $box['body'] = '<a target="_blank" href="http://www.amazon.com/Jose-Eduardo-Garcia-Torres/e/B00AQ98ZGQ/?_encoding=UTF8&tag=7sabores-20&linkCode=ur2&camp=1789&creative=390957"><img src="' . $base_url . '/sites/default/files/7sabores-banner-amazon.png" title="Libros Aprendizaje Drupal"></a>';
+  $box['body'] = '<a target="_blank" href="http://www.7sabores.com/inicio?qt-videos_para_inicio=2#qt-videos_para_inicio"><img src="' . $base_url . '/sites/default/files/7sabores-banner-amazon.png" title="Libros Aprendizaje Drupal"></a>';
 
   drupal_write_record('block_custom', $box);
 
@@ -686,4 +686,7 @@ function _plato_tipico_combine_ingredients() {
   );
   
   drupal_write_record('block', $search_block, array('module', 'delta', 'theme'));
+  
+  //rebuild localization update projects
+  l10n_update_build_projects(TRUE);
 }

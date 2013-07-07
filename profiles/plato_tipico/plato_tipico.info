@@ -73,6 +73,7 @@ dependencies[] = i18n_variable
 ; Other
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = coffee 
 dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = module_filter
@@ -95,3 +96,6 @@ dependencies[] = print
 dependencies[] = xmlsitemap
 dependencies[] = elysia_cron
 dependencies[] = security_review
+dependencies[] = link
+dependencies[] = phone
+dependencies[] = email
